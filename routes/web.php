@@ -19,6 +19,6 @@ route::get('r1', function () {
 route::get('r2', function () {
     return view('welcome');
 });
-route::get('hello/{name}', function($name){
+route::get('hello/{name?}', function($name = 'Everybody'){
    return 'Hello, '.$name;
 });
