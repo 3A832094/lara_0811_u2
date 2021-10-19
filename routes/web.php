@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+route::get('r1', function () {
+    return redirect('r2');
+});
+route::get('r2', function () {
     return view('welcome');
 });
