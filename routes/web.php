@@ -12,7 +12,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+route::get('/', function () {
+    return view('welcome');
+});
 route::get('r1', function () {
     return redirect('r2');
 });
@@ -24,4 +26,4 @@ route::get('r3', function () {
 });
 route::get('hello/{name?}', function($name = 'Everybody'){
    return 'Hello, '.$name;
-});
+})->name('hello.index');
