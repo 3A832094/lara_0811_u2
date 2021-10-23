@@ -27,3 +27,11 @@ route::get('r3', function () {
 route::get('hello/{name?}', function($name = 'Everybody'){
    return 'Hello, '.$name;
 })->name('hello.index');
+route::get('dashboard',function (){
+    return 'dashboard';
+});
+route::group(['prefix'=>'admin'], function (){
+    route::get('dashboard', function (){
+        return 'admin dashboard';
+    });
+});
